@@ -4,6 +4,11 @@
 
 A C++ anime moderation Discord bot, using D++ library version 10.0.23. For more information about this library's features, you can view them [here](https://github.com/brainboxdotcc/DPP).
 
+[![GitHub license](https://img.shields.io/github/license/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/harshfeudal/Tsukasa-Tsukuyomi)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/issues)
+[![Build status](https://ci.appveyor.com/api/projects/status/yjn4if9toapw3h2n?svg=true)](https://ci.appveyor.com/project/harshfeudal/tsukasa-tsukuyomi)
+
 </div>
 
 ### 📝 About this project
