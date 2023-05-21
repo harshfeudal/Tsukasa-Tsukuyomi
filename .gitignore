@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+x64/
+
+# Solution file
+*.aps
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Visual Studio Code and CMake build
+.vscode/
+build/
+
+# Configuration and others
+*.exe
+.env
