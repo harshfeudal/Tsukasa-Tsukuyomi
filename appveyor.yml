@@ -1,4 +1,4 @@
-version: 0.1.7.{build}
+version: 1.0.0.{build}
 image: Visual Studio 2022
 environment:
   matrix:
@@ -15,8 +15,11 @@ environment:
 build_script:
   - cmd: >-
       set
+
       mkdir build
+
       cd build
+
       cmake -G %GENERATOR% ..
       
       cmake --build . --config %BUILD_TYPE%
