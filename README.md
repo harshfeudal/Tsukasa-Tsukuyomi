@@ -68,6 +68,8 @@ because we haven't imported the code on here, and it has no affect on this curre
     © 2023 - Harshfeudal
 </sub>
 
+<br />
+
 <sub>
     © 2018 - Kenjiro HATA/SHOGAKUKAN
 </sub>
