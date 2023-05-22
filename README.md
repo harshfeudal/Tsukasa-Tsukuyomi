@@ -1,13 +1,15 @@
 # Tsukasa Tsukuyomi
 
+<img src="https://github.com/harshfeudal/Tsukasa-Tsukuyomi/assets/87577447/c767ec10-283b-427a-8158-ceae05b86740" alt="Tsukasa-Tsukuyomi" align="right" width="125" />
+
 <div align="center">
 
 A C++ anime moderation Discord bot, using D++ library version 10.0.23. For more information about this library's features, you can view them [here](https://github.com/brainboxdotcc/DPP).
 
-[![GitHub license](https://img.shields.io/github/license/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/main/LICENSE)
+[![Build status](https://ci.appveyor.com/api/projects/status/yjn4if9toapw3h2n?svg=true)](https://ci.appveyor.com/project/harshfeudal/tsukasa-tsukuyomi)
 [![GitHub stars](https://img.shields.io/github/stars/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/harshfeudal/Tsukasa-Tsukuyomi)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/issues)
-[![Build status](https://ci.appveyor.com/api/projects/status/yjn4if9toapw3h2n?svg=true)](https://ci.appveyor.com/project/harshfeudal/tsukasa-tsukuyomi)
+[![GitHub license](https://img.shields.io/github/license/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/main/LICENSE)
 
 </div>
 
@@ -39,35 +41,6 @@ To build on Visual Studio, you can just simply generate it using [Premake 5](htt
 1. To download `premake5.exe`, you can click [here](https://premake.github.io/download).
 
 2. Generate it. If you don't know how to use it, you can find instructions [here](https://premake.github.io/docs/Using-Premake/).
-
-    - If you're still unable to generate it: After installing `premake5.exe`, please put it in the directory where you can find the `.env.example` file.
-
-    - In the search bar from file explorer, type `cmd` to open the command prompt.
-
-    - Because you are standing in the directory where `premake5.exe` is located, the command prompt is navigating in that directory. Simply type `premake5 [action]` to generate the `.sln` file for Visual Studio. Check your Visual Studio version and generate based on this table:
-
-        | Action      | Description                                       |
-        |-------------|---------------------------------------------------|
-        | vs2022      | Generate Visual Studio 2022 project files         |
-        | vs2019      | Generate Visual Studio 2019 project files         |
-        | vs2017      | Generate Visual Studio 2017 project files         |
-        | vs2015      | Generate Visual Studio 2015 project files         |
-        | vs2013      | Generate Visual Studio 2013 project files         |
-        | vs2012      | Generate Visual Studio 2012 project files         |
-        | vs2010      | Generate Visual Studio 2010 project files         |
-        | vs2008      | Generate Visual Studio 2008 project files         |
-        | vs2005      | Generate Visual Studio 2005 project files         |
-        | gmake       | Generate GNU Makefiles (This generator is deprecated by gmake2) |
-        | gmake2      | Generate GNU Makefiles (including [Cygwin][1] and [MinGW][2]) |
-        | xcode4      | XCode projects |
-        | codelite    | CodeLite projects |
-
-    For example, I'm using Visual Studio Enterprise 2022, so I will type:
-
-    
-        ```console
-            premake5 vs2022
-        ```
     
 3. Edit the `.env.example` to `.env`. Put your Discord bot token that **has been encoded into Base64**.
 
