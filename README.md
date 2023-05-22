@@ -1,10 +1,10 @@
-# Tsukasa Tsukuyomi
+<div align="center"><img src="https://github.com/harshfeudal/Tsukasa-Tsukuyomi/assets/87577447/c767ec10-283b-427a-8158-ceae05b86740" alt="Tsukasa-Tsukuyomi" width="150" />
 
-<img src="https://github.com/harshfeudal/Tsukasa-Tsukuyomi/assets/87577447/c767ec10-283b-427a-8158-ceae05b86740" alt="Tsukasa-Tsukuyomi" align="right" width="180" style="vertical-align:middle; margin:10px 10px; border-radius: 100%" />
+<h1>Tsukasa Tsukuyomi</h1>
 
-<div align="center">
+A C++ anime moderation Discord bot, using D++ library version 10.0.24 (BETA)
 
-A C++ anime moderation Discord bot, using D++ library version 10.0.23. For more information about this library's features, you can view them [here](https://github.com/brainboxdotcc/DPP).
+For more information about this library's features, you can view them [here](https://github.com/brainboxdotcc/DPP).
 
 [![Build status](https://ci.appveyor.com/api/projects/status/yjn4if9toapw3h2n?svg=true)](https://ci.appveyor.com/project/harshfeudal/tsukasa-tsukuyomi)
 [![GitHub stars](https://img.shields.io/github/stars/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/stargazers)
@@ -63,3 +63,11 @@ Please note that I'm using the `x64 Release` build. You can change it if you wan
 
 The OCR Engine is currently working and training. It may update on this repository as soon as possible when finish. You no need to add `opencv` library and `.dll`
 because we haven't imported the code on here, and it has no affect on this current code.
+
+<sub>
+    © 2023 - Harshfeudal
+</sub>
+
+<sub>
+    © 2018 - Kenjiro HATA/SHOGAKUKAN
+</sub>
