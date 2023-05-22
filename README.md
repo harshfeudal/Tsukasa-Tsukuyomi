@@ -1,6 +1,6 @@
 # Tsukasa Tsukuyomi
 
-<img src="https://github.com/harshfeudal/Tsukasa-Tsukuyomi/assets/87577447/c767ec10-283b-427a-8158-ceae05b86740" alt="Tsukasa-Tsukuyomi" align="right" width="125" />
+<img src="https://github.com/harshfeudal/Tsukasa-Tsukuyomi/assets/87577447/c767ec10-283b-427a-8158-ceae05b86740" alt="Tsukasa-Tsukuyomi" align="right" width="180" style="vertical-align:middle; margin:10px 10px; border-radius: 100%" />
 
 <div align="center">
 
