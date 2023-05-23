@@ -9,19 +9,11 @@ std::tuple<bool, std::string> error_check(dpp::cluster& client, const dpp::slash
     const auto get_guild_user = dpp::find_guild_member(guild_id, user_id);
 
     const auto guild = dpp::find_guild(guild_id);
-    const auto guild_member = guild->members.find(user_id);
-
     dpp::user user = client.user_get_sync(user_id);
 
     const auto is_admin_user = guild->base_permissions(get_guild_user).has(dpp::p_administrator);
     const auto is_admin_issuer = guild->base_permissions(event.command.member).has(dpp::p_administrator);
     const auto is_admin_client = event.command.app_permissions.has(dpp::p_administrator);
-
-    if (guild_member == guild->members.end())
-    {
-        description = fmt::format("User `{}` is not staying in this guild!", user.format_username());
-        is_error = true;
-    }
 
     if (!guild->base_permissions(event.command.member).has(permission))
     {

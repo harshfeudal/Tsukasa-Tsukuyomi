@@ -14,14 +14,17 @@ void kick(dpp::cluster& client, const dpp::slashcommand_t& event)
 	std::string description;
 	dpp::user user = client.user_get_sync(user_id);
 
+	const auto guild_member = guild->members.find(user_id);
 	const auto client_roles = dpp::find_guild_member(guild_id, client.me.id).roles;
 	const auto user_roles = dpp::find_guild_member(guild_id, user_id).roles;
 
 	uint8_t client_pos;
 	uint8_t	user_pos;
-	bool is_higher = false;
 
-	if (!client_roles.empty() && !user_roles.empty())
+	bool is_higher = false;
+	bool is_failed = false;
+
+	if (!client_roles.empty() && !user_roles.empty() && (guild_member != guild->members.end()))
 	{
 		const auto client_pos = dpp::find_role(client_roles.at(0))->position;
 		const auto user_pos = dpp::find_role(user_roles.at(0))->position;
@@ -32,7 +35,15 @@ void kick(dpp::cluster& client, const dpp::slashcommand_t& event)
 		}
 	}
 
-	if (!std::get<bool>(is_error) && !is_higher)
+	if (guild_member == guild->members.end())
+	{
+        description = fmt::format("User `{}` is not staying in this guild!", user.format_username());
+		send_error(description, event);
+
+		is_failed = true;
+	}
+
+	if (!std::get<bool>(is_error) && !is_higher && !is_failed)
 	{
 		const auto reason_param = event.get_parameter("reason");
 		const auto reason = std::holds_alternative<std::string>(reason_param)

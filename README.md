@@ -59,6 +59,10 @@ $ cmake --build . --config Release
 
 Please note that I'm using the `x64 Release` build. You can change it if you want a different build.
 
+### 💻 Contribution and Pull Request
+
+I'd probably glad to see if you have anything new to help and support me. To do that, please make one and before you do that, just make sure you've tested the code by using your bot. I won't bite you if you do it wrong, but just make sure that you have to test it clearly before I merge it.
+
 ### 📝 Please note
 
 The OCR Engine is currently working and training. It may update on this repository as soon as possible when finish. You no need to add `opencv` library and `.dll`
