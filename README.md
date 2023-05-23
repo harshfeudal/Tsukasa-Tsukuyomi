@@ -2,7 +2,7 @@
 
 <h1>Tsukasa Tsukuyomi</h1>
 
-A C++ anime moderation Discord bot, using D++ library version 10.0.24 (BETA)
+A C++ anime moderation Discord bot, using D++ library version 10.0.24 (BETA version)
 
 For more information about this library's features, you can view them [here](https://github.com/brainboxdotcc/DPP).
 
@@ -23,7 +23,7 @@ For more information about this library's features, you can view them [here](htt
 
 These are the libraries that we're using in this project:
 
-- [Dpp](https://github.com/brainboxdotcc/DPP) - version `10.0.23` (latest)
+- [Dpp](https://github.com/brainboxdotcc/DPP) - version `10.0.24` (BETA version)
 - [Spdlog](https://github.com/gabime/spdlog) - version `1.11.0` (latest)
 - [Base64 (extracted)](https://gist.github.com/tomykaira/f0fd86b6c73063283afe550bc5d77594)
 - [OpenCV](https://github.com/opencv/opencv)
