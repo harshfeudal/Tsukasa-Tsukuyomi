@@ -18,7 +18,7 @@ project "Tsukasa Tsukuyomi"
 	links      { "dpp.lib", "opencv_world470d.lib" }
 	files      { 
 		"src/**.cpp", 
-		"src/cmd_ists/cmd_common/**.cpp",
+		"src/cmd_lists/cmd_common/**.cpp",
         "src/cmd_lists/cmd_moderation/**.cpp",
         "src/cmd_engine/**.cpp",
 		"handler/**.h",
