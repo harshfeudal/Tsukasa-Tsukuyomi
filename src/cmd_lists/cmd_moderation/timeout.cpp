@@ -1,6 +1,6 @@
 #include <spdlog/spdlog.h>
 
-#include <cmd_list.h>
+#include <cmd_lists.h>
 #include <builder/layout.h>
 
 void timeout(dpp::cluster& client, const dpp::slashcommand_t& event)

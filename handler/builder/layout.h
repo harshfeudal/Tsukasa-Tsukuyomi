@@ -4,7 +4,7 @@
 
 #include <dpp/dpp.h>
 
-#include <cmd_list.h>
+#include <cmd_lists.h>
 #include <builder/command.h>
 #include <builder/button.h>
 #include <cmd_engine.h>
