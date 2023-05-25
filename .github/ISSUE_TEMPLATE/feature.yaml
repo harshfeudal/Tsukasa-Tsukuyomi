@@ -1,0 +1,28 @@
+name: Feature request
+description: Submit a feature request
+labels:
+  - 'kind: feature'
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Thanks for requesting!
+        If you have any further question, you can join my [Discord server](https://discord.gg/pAZZfqC5ST)!
+  - type: textarea
+    id: summary
+    attributes:
+      label: Describe a feature you would like to add in the bot
+      description: >
+        Please describe briefly what new feature you would like to add to this bot.
+    validations:
+      required: true
+  - type: checkboxes
+    id: validation
+    attributes:
+      label: Validation
+      description: >
+        Please check these additional steps:
+      options:
+        - label: I have met all requirements on [your instructions](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/master/README.md) that you provided on `REAMDE.md`.
+      validations:
+        required: true
