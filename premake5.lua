@@ -1,8 +1,8 @@
-workspace "Tsukasa Tsukuyomi"
+workspace "Tsukasa-Tsukuyomi"
 	architecture "x64"
 	configurations { "Release" }
 
-project "Tsukasa Tsukuyomi"
+project "Tsukasa-Tsukuyomi"
 	kind          "ConsoleApp"
 	language      "C++"
 	cppdialect    "C++17"
