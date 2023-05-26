@@ -14,13 +14,9 @@ jobs:
       - uses: abel0b/setup-premake@v2.2
         with:
           version: "5.0.0-beta2"
-      - name: Premake5 generated
-        run:
-          premake5 gmake2
-      - name: Build Tsukasa Tsukuyomi bot
-        run:
-          make config=release build
-      - name: Run Tsukasa Tsukuyomi bot
+          
+      - name: Configurate Tsukasa Tsukuyomi bot
         run: |
-          cd build/build
-          ./Tsukasa-Tsukuyomi
+          premake5 gmake2
+          make config=release
+          
