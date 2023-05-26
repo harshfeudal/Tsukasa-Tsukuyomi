@@ -11,16 +11,14 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@master
-    
-    - name: Setup premake
-      uses: ./
-      with:
-        version: 5.0.0-beta2
-
-    - run: premake5 --version
-
-    - run: mkdir subdir
-
-    - working-directory: subdir
-      run: premake5 --version
+      - uses: abel0b/setup-premake@v2.2
+        with:
+          version: "5.0.0-beta2"
+      - name: Build Tsukasa Tsukuyomi bot
+        run:
+          premake5 gmake2
+          make config=release build
+      - name: Run Tsukasa Tsukuyomi bot
+        run: |
+          cd build/build
+          ./Tsukasa-Tsukuyomi
