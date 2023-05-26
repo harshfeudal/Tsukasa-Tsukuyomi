@@ -28,5 +28,5 @@ jobs:
           msbuild /m "Tsukasa Tsukuyomi.sln" /p:configuration="release"
 
       - name: Run
-        run: D:\a\Tsukasa-Tsukuyomi\Tsukasa-Tsukuyomi\x64\Release\Tsukasa Tsukuyomi.exe
+        run: .\Tsukasa Tsukuyomi.exe
           
