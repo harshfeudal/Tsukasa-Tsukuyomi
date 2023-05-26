@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: |
           premake5 vs2022
-          msbuild /m "Tsukasa Tsukuyomi.sln" /p:configuration="release" -j8
+          msbuild /m "Tsukasa Tsukuyomi.sln" /p:configuration="release"
 
       - name: Run
         run: D:\a\Tsukasa-Tsukuyomi\Tsukasa-Tsukuyomi\x64\Release\Tsukasa Tsukuyomi.exe
