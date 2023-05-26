@@ -19,9 +19,6 @@ jobs:
         with:
           version: "5.0.0-beta2"
 
-      - name: setup msbuild
-        uses: microsoft/setup-msbuild@v1.1
-
       - name: Build
         run: |
           premake5.exe vs2022
