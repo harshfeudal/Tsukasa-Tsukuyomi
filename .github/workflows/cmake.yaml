@@ -6,7 +6,7 @@ jobs:
   test:
     strategy:
       matrix:
-        os: [ windows-latest ]
+        os: [ windows, linux ]
 
     runs-on: ${{ matrix.os }}
 
@@ -25,4 +25,4 @@ jobs:
           cmake --build . --config Release
 
       - name: Run
-        run: .\"Tsukasa Tsukuyomi.exe"
+        run: .\Tsukasa-Tsukuyomi.exe
