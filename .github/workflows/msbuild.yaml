@@ -11,12 +11,19 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: abel0b/setup-premake@v2.2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Premake setup
+        uses: abel0b/setup-premake@v2.2
         with:
           version: "5.0.0-beta2"
-          
-      - name: Configurate Tsukasa Tsukuyomi bot
+
+      - name: setup msbuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Build
         run: |
-          premake5 gmake2
-          make config=release
+          premake5.exe vs2022
+          msbuild /m Tsukasa Tsukuyomi.sln /p:configuration="release"
           
