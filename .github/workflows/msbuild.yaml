@@ -21,6 +21,6 @@ jobs:
 
       - name: Build
         run: |
-          premake5.exe vs2022
+          premake5 vs2022
           msbuild /m Tsukasa Tsukuyomi.sln /p:configuration="release"
           
