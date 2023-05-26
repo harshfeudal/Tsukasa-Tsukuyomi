@@ -15,7 +15,7 @@ jobs:
         with:
           version: "5.0.0-beta2"
       - name: Build Tsukasa Tsukuyomi bot
-        run:
+        run: |
           premake5 gmake2
           make config=release build
       - name: Run Tsukasa Tsukuyomi bot
