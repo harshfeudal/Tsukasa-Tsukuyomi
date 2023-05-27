@@ -1,86 +1,28 @@
-name: Bug Report
-description: Create a bug report
-labels:
-  - 'kind: bug'
+name: '🐛 Bug Report'
+description: Report errors and problems
+labels: [bug]
 body:
-  - type: markdown
-    attributes:
-      value: >
-        Thanks for reporting! 
-        Please note that you should have a **short title** about describe what the bug is!
-        If you have any further question, you can join my [Discord server](https://discord.gg/pAZZfqC5ST)!
-  - type: textarea
-    id: summary
-    attributes:
-      label: Description
-      description: >
-        Please provide an abstract description of the issue to the developers,
-        and why you consider it to be a bug. Please include any specific links
-        to the documentation, or code.
-    validations:
-      required: true
-  - type: textarea
-    id: reproduce
-    attributes:
-      label: Reproduction steps
-      description: >
-        How do you trigger the bug? Please walk us through step by step. Be as
-        specific as possible.
-    validations:
-      required: true
-  - type: textarea
-    id: results
-    attributes:
-      label: Expected vs. actual results
-      description: >
-        Please describe what you expected to happen after the steps above and
-        what actually happened.
-    validations:
-      required: true
-  - type: textarea
-    id: code
-    attributes:
-      label: Minimal code example
-      description: >
-        If possible, provide a small and self-contained example that triggers
-        the bug. Please understand that we cannot analyze and debug large code
-        bases. Please do not paste screenshots here.
-      render: Shell
-  - type: textarea
-    id: output
-    attributes:
-      label: Error messages
-      description: >
-        Please provide any kind of error output (compilation errors, exception
-        messages, stack traces, etc.) which can help to diagnose the error.
-      render: Shell
-  - type: input
-    id: compiler
-    attributes:
-      label: Compiler and operating system
-      description: >
-        On which operating systems and compilers have you observed the issue?
-        Include as many relevant details about the environment you experienced
-        the bug in.
-    validations:
-      required: true
-  - type: input
+  - type: dropdown
     id: version
     attributes:
-      label: Library version
-      description: >
-        Which version of the library did you use? If it is a released version,
-        please enter the version number (ex: v1.0.0). Otherwise, please enter
-        the commit hash.
+      label: Are you experiencing an issue with version...
+      options:
+        - Github master branch
     validations:
       required: true
-  - type: checkboxes
-    id: validation
+
+  - type: textarea
+    id: description
     attributes:
-      label: Validation
-      description: >
-        Please check these additional steps:
-      options:
-        - label: I have met all requirements on [your instructions](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/master/README.md) that you provided on `REAMDE.md`.
-      validations:
-        required: true
+      label: '🐞 Description'
+      description: A clear and concise description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible-solution
+    attributes:
+      label: '💡 Possible Solution'
+      description: 'Optional: only if you have suggestions on a fix/reason for the bug'
+    validations:
+      required: false
