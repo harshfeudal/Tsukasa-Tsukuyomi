@@ -3,10 +3,10 @@ name: MSBuild
 on: [ push, pull_request ]
 
 jobs:
-  test:
+  windows-build:
     strategy:
       matrix:
-        os: [ windows ]
+        os: [ windows-latest ]
 
     runs-on: ${{ matrix.os }}
 
