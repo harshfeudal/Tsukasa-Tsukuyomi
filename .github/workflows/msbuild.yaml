@@ -3,7 +3,7 @@ name: MSBuild
 on: [ push, pull_request ]
 
 jobs:
-  build-test:
+  windows-build:
     strategy:
       matrix:
         os: [ windows-latest ]
