@@ -3,10 +3,10 @@ name: CMake
 on: [ push, pull_request ]
 
 jobs:
-  test:
+  build-test:
     strategy:
       matrix:
-        os: [ windows, linux ]
+        os: [ windows-latest, ubuntu-latest ]
 
     runs-on: ${{ matrix.os }}
 
