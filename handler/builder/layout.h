@@ -13,15 +13,6 @@
 inline std::map<std::string, Command> commands
 {
 	// Common commands
-	{
-		"ocr",
-		{
-			"Read imagine-to-text attachment", ocr,
-			{
-				dpp::command_option(dpp::co_attachment, "attachment", "Add attachment", true)
-			}
-		}
-	},
 	{ 
 		"ping", 
 		{ 
