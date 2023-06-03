@@ -6,7 +6,6 @@
 #include <cmd_engine.h>
 
 // Common commands
-void ocr(dpp::cluster& client, const dpp::slashcommand_t& event);
 void ping(dpp::cluster& client, const dpp::slashcommand_t& event);
 void profile(dpp::cluster& client, const dpp::slashcommand_t& event);
 
