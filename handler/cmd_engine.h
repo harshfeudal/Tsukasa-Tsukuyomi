@@ -11,5 +11,3 @@ void send_confirm(std::string confirmation, std::string description, dpp::cluste
 
 std::tuple<uint64_t, bool, std::string> time_format(const std::string& input);
 std::tuple<bool, std::string> error_check(dpp::cluster& client, const dpp::slashcommand_t& event, dpp::snowflake user_id, dpp::permission permission, std::string cmd_name);
-
-void purge_engine(dpp::cluster& client, const dpp::slashcommand_t& event, int64_t amount, dpp::snowflake channel_id);
