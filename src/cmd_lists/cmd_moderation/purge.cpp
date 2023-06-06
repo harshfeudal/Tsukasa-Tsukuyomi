@@ -20,12 +20,6 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
         {
             if (!callback.is_error())
             {
-                std::vector<dpp::snowflake> message_ids;
-                const auto message_map = std::get<dpp::message_map>(callback.value);
-
-                for (const auto& messages : message_map)
-                    message_ids.emplace_back(messages.second);
-
                 std::vector<time_t> message_collector;
                 const auto collector_map = std::get<dpp::message_map>(callback.value);
 
@@ -53,7 +47,7 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
                             const auto message_map = std::get<dpp::message_map>(callback.value);
 
                             for (const auto& messages : message_map)
-                                message_ids.emplace_back(messages.second);
+                                message_ids.emplace_back(messages.first);
 
                             client.message_delete_bulk(message_ids, event.command.channel_id);
                         }
@@ -69,7 +63,7 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
                     const auto message_map = std::get<dpp::message_map>(callback.value);
 
                     for (const auto& messages : message_map)
-                        message_ids.emplace_back(messages.second);
+                        message_ids.emplace_back(messages.first);
 
                     client.message_delete_bulk(message_ids, event.command.channel_id);
                 }
