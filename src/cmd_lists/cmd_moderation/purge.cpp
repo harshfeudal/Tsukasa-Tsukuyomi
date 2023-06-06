@@ -13,9 +13,6 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
         ? std::get<std::string>(reason_param)
         : "No reason provided";
 
-    const auto amount_division = amount_messages / 100;
-    const auto amount_mod = amount_messages % 100;
-
     client.messages_get(event.command.channel_id, 0, 0, 0, amount_messages, [&](const dpp::confirmation_callback_t& callback)
         {
             if (!callback.is_error())
@@ -28,50 +25,32 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
 
                 if (message_collector.at(message_collector.size() - 1) < 1209601)
                     is_valid_to_purge = false;
-            }
-        });
 
-    if (is_valid_to_purge)
-    {
-        switch (amount_mod)
-        {
-        case 0: break;
-        default:
-            for (int i = 1; i < amount_mod + 1; i++)
-            {
-                client.messages_get(event.command.channel_id, 0, 0, 0, 100, [&](const dpp::confirmation_callback_t& callback)
-                    {
-                        if (!callback.is_error())
-                        {
-                            std::vector<dpp::snowflake> message_ids;
-                            const auto message_map = std::get<dpp::message_map>(callback.value);
-
-                            for (const auto& messages : message_map)
-                                message_ids.emplace_back(messages.first);
-
-                            client.message_delete_bulk(message_ids, event.command.channel_id);
-                        }
-                    });
-            }
-        }
-
-        client.messages_get(event.command.channel_id, 0, 0, 0, amount_division, [&](const dpp::confirmation_callback_t& callback)
-            {
-                if (!callback.is_error())
+                if (is_valid_to_purge)
                 {
                     std::vector<dpp::snowflake> message_ids;
                     const auto message_map = std::get<dpp::message_map>(callback.value);
 
                     for (const auto& messages : message_map)
-                        message_ids.emplace_back(messages.first);
+                    {
+                        if (!messages.second.pinned)
+                            message_ids.emplace_back(messages.first);
+                    }
 
-                    client.message_delete_bulk(message_ids, event.command.channel_id);
+                    for (int i = 0; i < message_ids.size(); i++)
+                    {
+                        std::vector<dpp::snowflake> delete_id;
+                        delete_id.push_back(message_ids.at(i));
+
+                        if (delete_id.size() >= 100 || delete_id.at(i) == message_ids.at(message_ids.size() - 1))
+                        {
+                            client.message_delete_bulk(delete_id, event.command.channel_id);
+                            delete_id.clear();
+                        } 
+                    }
                 }
-            });
-
-        const auto description = fmt::format("Deleted {} messages in <#{}>", amount_messages, event.command.channel_id);
-        send_success(description, event);
-    }
-    else
-        send_error("Cannot delete too old messages, please try again", event);
+                else
+                    send_error("Cannot delete too old messages, please try again", event);
+            }
+        });
 }
