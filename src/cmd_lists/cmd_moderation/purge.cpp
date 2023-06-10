@@ -8,9 +8,6 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
     auto amount_messages = std::get<int64_t>(event.get_parameter("amount"));
     int purged_message = 0;
 
-    bool is_finished = false;
-    bool is_error = false;
-
     const auto channel_id = event.command.channel_id;
     const auto reason_param = event.get_parameter("reason");
 
@@ -35,9 +32,7 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
 
                 switch (message_ids.size())
                 {
-                case 0: 
-                    is_error = true;
-                    break;
+                case 0: break;
                 case 1:
                     client.message_delete(message_ids.at(0), channel_id);
                     purged_message += 1;
@@ -50,16 +45,8 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
                 }
             });
 
-        if (is_error)
-            send_error("Cannot purge message older than 14 days", event);
-        else
-        {
-            if (is_finished)
-            {
-                auto description = fmt::format("Found and purged {} messages", purged_message);
-                send_success(description, event);
-            }
-        }
+        auto description = fmt::format("Found and purged {} messages", purged_message);
+        send_success(description, event);
     }
     else
     {
@@ -115,22 +102,15 @@ void purge(dpp::cluster& client, const dpp::slashcommand_t& event)
                 case 1:
                     client.message_delete(message_ids.at(0), channel_id);
                     purged_message += 1;
-
-                    is_finished = true;
                     break;
                 default:
                     client.message_delete_bulk(message_ids, channel_id);
                     purged_message += message_ids.size();
-
-                    is_finished = true;
                     break;
                 }
             });
 
-        if (is_finished && !is_error)
-        {
-            auto description = fmt::format("Found and purged {} messages", purged_message);
-            send_success(description, event);
-        }
+        auto description = fmt::format("Found and purged {} messages", purged_message);
+        send_success(description, event);
     }
 }
