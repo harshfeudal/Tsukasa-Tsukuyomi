@@ -5,6 +5,8 @@
 #include <spdlog/spdlog.h>
 #include <dpp/dpp.h>
 
+#define FUNCTION_TUPLE std::function<std::tuple<bool, int>(const dpp::confirmation_callback_t&)>
+
 void send_error(std::string description, const dpp::slashcommand_t& event);
 void send_success(std::string description, const dpp::slashcommand_t& event);
 void send_confirm(std::string confirmation, std::string description, dpp::cluster& client, const dpp::slashcommand_t& event, bool is_ephemeral);

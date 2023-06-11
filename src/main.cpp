@@ -9,7 +9,7 @@
 #include <dotenv.h>
 #include <decoder.h>
 
-#include <builder/config.h>
+#include <cmd_builder/cmd_configure.h>
 
 #pragma warning(pop)
 

@@ -5,11 +5,10 @@
 #include <dpp/dpp.h>
 
 #include <cmd_lists.h>
-#include <builder/command.h>
-#include <builder/button.h>
+#include <cmd_builder/cmd_struct.h>
+#include <cmd_builder/cmd_button.h>
 #include <cmd_engine.h>
 
-// Create a command list
 inline std::map<std::string, Command> commands
 {
 	// Common commands

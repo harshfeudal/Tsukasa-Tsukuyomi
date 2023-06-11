@@ -22,7 +22,7 @@ project "Tsukasa-Tsukuyomi"
         "src/cmd_lists/cmd_moderation/**.cpp",
         "src/cmd_engine/**.cpp",
 		"handler/**.h",
-        "handler/builder/**.h",
+        "handler/cmd_builder/**.h",
 		"Tsukasa Tsukuyomi.rc",
         "resource.h"
 	}
