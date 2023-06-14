@@ -5,9 +5,11 @@
 
 #include <dpp/dpp.h>
 #include <spdlog/spdlog.h>
+#include <sqlite3/sqlite3.h>
 
 #include <dotenv.h>
 #include <decoder.h>
+#include <database.h>
 
 #include <cmd_builder/cmd_configure.h>
 
@@ -42,6 +44,8 @@ int main()
 			if (filter != commands.end())
 				filter->second.function(client, event);
 		});
+
+	run_database();
 
 	SetConsoleTitle(TEXT("Tsukasa Tsukuyomi Bot"));
 

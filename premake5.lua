@@ -15,7 +15,7 @@ project "Tsukasa-Tsukuyomi"
 
 	includedirs{ "include", "handler" }
 	libdirs    { "lib" }
-	links      { "dpp.lib", "opencv_world470d.lib" }
+	links      { "dpp.lib", "opencv_world470d.lib", "sqlite3.lib" }
 	files      { 
 		"src/**.cpp", 
 		"src/cmd_lists/cmd_common/**.cpp",

@@ -10,6 +10,7 @@ add_executable(${PROJECT_NAME} ${mainsrc} ${common} ${moderation} ${cmd_engine} 
 
 target_link_libraries(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/lib/dpp.lib)
 target_link_libraries(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/lib/opencv_world470d.lib)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/lib/sqlite3.lib)
 target_include_directories(${PROJECT_NAME} PRIVATE "handler" "include" "lib")
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

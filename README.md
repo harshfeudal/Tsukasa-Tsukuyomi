@@ -5,13 +5,13 @@
 A C++ anime moderation Discord bot, using D++ library version 10.0.24 (BETA version) <br />
 For more information about this library's features, you can view them [here](https://github.com/brainboxdotcc/DPP).
 
-[![GitHub issues](https://img.shields.io/github/issues/harshfeudal/Tsukasa-Tsukuyomi)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/issues)
-[![GitHub license](https://img.shields.io/github/license/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/stargazers)
-[![Visual Studio](https://badgen.net/badge/VS/2022/3d3d44?icon=visualstudio&labelColor=purple)](https://visualstudio.microsoft.com/) <br />
-[![Build status](https://ci.appveyor.com/api/projects/status/yjn4if9toapw3h2n?svg=true)](https://ci.appveyor.com/project/harshfeudal/tsukasa-tsukuyomi)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b11123501cc74f3fad147bb0fb70daec)](https://app.codacy.com/gh/harshfeudal/Tsukasa-Tsukuyomi/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CMake](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/actions/workflows/cmake.yaml/badge.svg?branch=master)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/actions/workflows/cmake.yaml)
-[![MSBuild](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/actions/workflows/msbuild.yaml/badge.svg?branch=master)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/actions/workflows/msbuild.yaml)
+[![Build status](https://ci.appveyor.com/api/projects/status/yjn4if9toapw3h2n?svg=true)](https://ci.appveyor.com/project/harshfeudal/tsukasa-tsukuyomi)
+[![MSBuild](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/actions/workflows/msbuild.yaml/badge.svg?branch=master)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/actions/workflows/msbuild.yaml) <br />
+[![GitHub issues](https://img.shields.io/github/issues/harshfeudal/Tsukasa-Tsukuyomi)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/issues)
+[![GitHub stars](https://img.shields.io/github/stars/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/harshfeudal/Tsukasa-Tsukuyomi/stargazers)
+[![GitHub license](https://img.shields.io/github/license/harshfeudal/Tsukasa-Tsukuyomi?color=brightgreen)](https://github.com/https://github.com/harshfeudal/Tsukasa-Tsukuyomi/blob/main/LICENSE)
 
 </div>
 
