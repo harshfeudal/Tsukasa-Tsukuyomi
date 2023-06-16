@@ -21,6 +21,8 @@ project "Tsukasa-Tsukuyomi"
 		"src/cmd_lists/cmd_common/**.cpp",
         "src/cmd_lists/cmd_moderation/**.cpp",
         "src/cmd_engine/**.cpp",
+		"src/database/**.cpp",
+		"src/database/db_resources/**.cpp",
 		"handler/**.h",
         "handler/cmd_builder/**.h",
 		"Tsukasa Tsukuyomi.rc",

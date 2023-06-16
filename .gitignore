@@ -12,7 +12,7 @@ x64/
 # Visual Studio Code and CMake build
 .vscode/
 build/
-database/
+/database/
 
 # Configuration and others
 *.exe

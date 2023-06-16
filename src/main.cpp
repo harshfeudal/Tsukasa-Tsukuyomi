@@ -2,6 +2,7 @@
 #pragma warning(disable: 4251)
 #pragma warning(disable: 6385)
 #pragma warning(disable: 6285)
+#pragma warning(disable: 4700)
 
 #include <dpp/dpp.h>
 #include <spdlog/spdlog.h>
@@ -45,7 +46,8 @@ int main()
 				filter->second.function(client, event);
 		});
 
-	run_database();
+	sqlite3* database;
+	run_database(database);
 
 	SetConsoleTitle(TEXT("Tsukasa Tsukuyomi Bot"));
 
