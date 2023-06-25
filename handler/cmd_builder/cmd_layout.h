@@ -64,7 +64,7 @@ inline std::map<std::string, Command> commands
         {
             "Delete message(s)", purge,
             {
-                dpp::command_option(dpp::co_integer, "amount", "Amount of message(s) to delete, from 2 to 100", true)
+                dpp::command_option(dpp::co_integer, "amount", "Amount of message(s) to delete, from 1 to 1000", true)
 					.set_min_value(static_cast<int64_t>(1))
 					.set_max_value(static_cast<int64_t>(1000)),
                 dpp::command_option(dpp::co_string, "reason", "The reason to purge, if any", false)
