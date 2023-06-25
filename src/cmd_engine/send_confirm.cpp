@@ -3,7 +3,7 @@
 void send_confirm(std::string confirmation, std::string description, dpp::cluster& client, const dpp::slashcommand_t& event, bool is_ephemeral)
 {
     auto create_embed = dpp::embed()
-        .set_color(0xa1fe9a)
+        .set_color(0x38ff9b)
         .set_title(confirmation)
         .set_description(description);
 

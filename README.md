@@ -29,7 +29,6 @@ These are the libraries that we're using in this project:
 - [Spdlog](https://github.com/gabime/spdlog) - version `1.11.0` (latest)
 - [Base64 (extracted)](https://gist.github.com/tomykaira/f0fd86b6c73063283afe550bc5d77594)
 - [OpenCV](https://github.com/opencv/opencv)
-- [SQLite](https://www.sqlite.org/download.html)
 
 I myself coded the `dotenv.h` header. If you want to use it, please remember to copy the `MIT-LICENSE` below.
 

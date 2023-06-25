@@ -3,7 +3,7 @@
 void send_error(std::string description, const dpp::slashcommand_t& event)
 {
     auto create_embed = dpp::embed()
-        .set_color(0xff6b6b)
+        .set_color(0x8c7cff)
         .set_title("Error!")
         .set_description(description);
 

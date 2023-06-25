@@ -5,11 +5,11 @@
 #include <spdlog/spdlog.h>
 #include <dpp/dpp.h>
 
-#define FUNCTION_TUPLE std::function<std::tuple<bool, int>(const dpp::confirmation_callback_t&)>
-
 void send_error(std::string description, const dpp::slashcommand_t& event);
 void send_success(std::string description, const dpp::slashcommand_t& event);
 void send_confirm(std::string confirmation, std::string description, dpp::cluster& client, const dpp::slashcommand_t& event, bool is_ephemeral);
+
+int purge_engine(const dpp::message_map message_map, dpp::snowflake channel_id, dpp::cluster& client, int purge_count);
 
 std::tuple<uint64_t, bool, std::string> time_format(const std::string& input);
 std::tuple<bool, std::string> error_check(dpp::cluster& client, const dpp::slashcommand_t& event, dpp::snowflake user_id, dpp::permission permission, std::string cmd_name);

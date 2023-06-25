@@ -15,14 +15,12 @@ project "Tsukasa-Tsukuyomi"
 
 	includedirs{ "include", "handler" }
 	libdirs    { "lib" }
-	links      { "dpp.lib", "opencv_world470d.lib", "sqlite3.lib" }
+	links      { "dpp.lib", "opencv_world470d.lib" }
 	files      { 
 		"src/**.cpp", 
 		"src/cmd_lists/cmd_common/**.cpp",
         "src/cmd_lists/cmd_moderation/**.cpp",
         "src/cmd_engine/**.cpp",
-		"src/database/**.cpp",
-		"src/database/db_resources/**.cpp",
 		"handler/**.h",
         "handler/cmd_builder/**.h",
 		"Tsukasa Tsukuyomi.rc",
