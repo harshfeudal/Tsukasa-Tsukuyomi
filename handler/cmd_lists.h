@@ -3,6 +3,7 @@
 #pragma warning (disable: 4244)
 
 #include <dpp/dpp.h>
+
 #include <cmd_engine.h>
 
 // Common commands

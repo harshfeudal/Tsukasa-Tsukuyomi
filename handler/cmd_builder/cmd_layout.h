@@ -5,11 +5,10 @@
 #include <dpp/dpp.h>
 
 #include <cmd_lists.h>
-#include <builder/command.h>
-#include <builder/button.h>
+#include <cmd_builder/cmd_struct.h>
+#include <cmd_builder/cmd_button.h>
 #include <cmd_engine.h>
 
-// Create a command list
 inline std::map<std::string, Command> commands
 {
 	// Common commands
@@ -65,7 +64,9 @@ inline std::map<std::string, Command> commands
         {
             "Delete message(s)", purge,
             {
-                dpp::command_option(dpp::co_integer, "amount", "Amount of message(s) to delete", true).set_min_value(static_cast<int64_t>(1)).set_max_value(static_cast<int64_t>(1000)),
+                dpp::command_option(dpp::co_integer, "amount", "Amount of message(s) to delete, from 1 to 1000", true)
+					.set_min_value(static_cast<int64_t>(1))
+					.set_max_value(static_cast<int64_t>(1000)),
                 dpp::command_option(dpp::co_string, "reason", "The reason to purge, if any", false)
             }
         }

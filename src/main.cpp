@@ -2,6 +2,7 @@
 #pragma warning(disable: 4251)
 #pragma warning(disable: 6385)
 #pragma warning(disable: 6285)
+#pragma warning(disable: 4700)
 
 #include <dpp/dpp.h>
 #include <spdlog/spdlog.h>
@@ -9,7 +10,7 @@
 #include <dotenv.h>
 #include <decoder.h>
 
-#include <builder/config.h>
+#include <cmd_builder/cmd_configure.h>
 
 #pragma warning(pop)
 

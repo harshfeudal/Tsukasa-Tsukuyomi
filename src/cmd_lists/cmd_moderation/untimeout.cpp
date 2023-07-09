@@ -1,14 +1,13 @@
 #include <spdlog/spdlog.h>
 
 #include <cmd_lists.h>
-#include <builder/layout.h>
+#include <cmd_builder/cmd_layout.h>
 
 void untimeout(dpp::cluster& client, const dpp::slashcommand_t& event)
 {
     const auto user_id = std::get<dpp::snowflake>(event.get_parameter("member"));
     const auto guild_id = event.command.guild_id;
 
-    std::string description;
     dpp::user user = client.user_get_sync(user_id);
 
     const auto is_error = error_check(client, event, user_id, dpp::p_moderate_members, "un-timeout");
@@ -25,6 +24,7 @@ void untimeout(dpp::cluster& client, const dpp::slashcommand_t& event)
             : "No reason provided";
 
         const auto get_user = dpp::find_guild_member(guild_id, user_id);
+        std::string description;
 
         if (get_user.is_communication_disabled())
         {

@@ -1,13 +1,18 @@
 #include <spdlog/spdlog.h>
 
 #include <cmd_lists.h>
-#include <builder/layout.h>
+#include <cmd_builder/cmd_layout.h>
 
 void timeout(dpp::cluster& client, const dpp::slashcommand_t& event)
 {
     const auto user_id = std::get<dpp::snowflake>(event.get_parameter("member"));
     const auto duration_str = std::get<std::string>(event.get_parameter("duration"));
     const auto guild_id = event.command.guild_id;
+
+    const auto reason_param = event.get_parameter("reason");
+    const auto reason = std::holds_alternative<std::string>(reason_param)
+        ? std::get<std::string>(reason_param)
+        : "No reason provided";
 
     const auto time_format_func = time_format(duration_str);
     const auto duration = time(0) + std::get<uint64_t>(time_format_func);
@@ -24,11 +29,6 @@ void timeout(dpp::cluster& client, const dpp::slashcommand_t& event)
 
     if (!std::get<bool>(is_error) && std::get<bool>(time_format_func))
     {
-        const auto reason_param = event.get_parameter("reason");
-        const auto reason = std::holds_alternative<std::string>(reason_param)
-            ? std::get<std::string>(reason_param)
-            : "No reason provided";
-
         const auto get_user = dpp::find_guild_member(guild_id, user_id);
 
         if (get_user.is_communication_disabled())
